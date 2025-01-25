@@ -8,9 +8,10 @@ const $congratulationsContainer = document.querySelector('.congratulations')
 let moves = 0 // Counter for the number of moves
 let flippedCards = [] // Cards currently flipped
 let matchedCards = 0 // Counter for matched pairs
+let isChecking = false // Flag to prevent interaction while checking cards
 
 // Array containing card value
-const cardValue = ['🌹', '❤️', '🥛', '🍆', '🥕', '🍍', '🍎']
+const cardValue = ['🌹', '❤️', '🥛', '🍆', '🥕', '🍍', '🍎', '😺']
 const deck = [...cardValue, ...cardValue] // Duplicated the cards
 
 // Function to shuffle the deck randomly
@@ -24,7 +25,9 @@ function initializeGame() {
   moves = 0
   matchedCards = 0
   flippedCards = []
+  isChecking = false
   $movesCounter.textContent = moves
+  $congratulationsContainer.textContent = ''
 
   // Shuffle the cards and clear the board
   const shuffledDeck = shuffleDeck(deck)
@@ -45,8 +48,8 @@ function initializeGame() {
 
 // Function to flip a card
 function flipCard(card) {
-  // Do nothing if the card is already flipped or matched
-  if (card.classList.contains('flipped') || card.classList.contains('matched'))
+  // Do nothing if the card is already flipped, matched, or if we are currently checking
+  if (card.classList.contains('flipped') || card.classList.contains('matched') || isChecking)
     return
 
   // Show the card's value and flip it
@@ -62,6 +65,7 @@ function flipCard(card) {
 
 // Function to check if the flipped cards are a match
 function checkForMatch() {
+  isChecking = true
   const [card1, card2] = flippedCards
 
   // If the cards match
@@ -82,6 +86,9 @@ function checkForMatch() {
         $congratulationsContainer.appendChild($congratulations_p)
       }, 500)
     }
+
+    // Allow interaction again
+    isChecking = false
   } else {
     // If the cards don't match, flip them back after a short delay
     setTimeout(() => {
@@ -92,6 +99,7 @@ function checkForMatch() {
       card2.classList.remove('flipped')
 
       flippedCards = [] // Reset the flipped cards array
+      isChecking = false // Allow interaction again
     }, 1000)
   }
 
