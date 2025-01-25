@@ -37,7 +37,7 @@ function initializeGame() {
     card.textContent = '' // Initially, the card is hidden
 
     // Add a click event to flip the card
-    card.addEventListener('click', () => flippedCards(card))
+    card.addEventListener('click', () => flipCard(card))
     $cardGrid.appendChild(card)
   })
 }
