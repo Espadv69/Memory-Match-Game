@@ -16,3 +16,12 @@ const deck = [...cardValue, ...cardValue] // Duplicated the cards
 function shuffleDeck(array) {
   return array.sort(() => Math.random() - 0.5)
 }
+
+// Function to initialize the game
+function initializeGame() {
+  // Reset global variables
+  moves = 0
+  matchedCards = 0
+  flippedCards = []
+  $movesCounter.textContent = moves
+}
