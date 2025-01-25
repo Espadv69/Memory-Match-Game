@@ -84,7 +84,7 @@ function checkForMatch() {
         $congratulations_p.textContent =
           'Congratulations! You completed the game'
         $congratulationsContainer.appendChild($congratulations_p)
-      }, 500)
+      }, 200)
     }
 
     // Allow interaction again
