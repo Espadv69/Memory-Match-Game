@@ -62,4 +62,13 @@ function flipCard(card) {
 // Function to check if the flipped cards are a match
 function checkForMatch() {
   const [card1, card2] = flippedCards
+
+  // If the cards match
+  if (card1.dataset.value === card2.dataset.value) {
+    card1.classList.add('matched')
+    card2.classList.add('matched')
+
+    matchedCards += 2 // Increment the matched pairs counter
+    flippedCards = [] // Reset the flipped cards array
+  }
 }
