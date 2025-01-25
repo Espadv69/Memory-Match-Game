@@ -63,3 +63,31 @@ button {
   scale: 1;
   transition: transform .3s;
 }
+
+.card.flipped {
+  background-color: orange;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: lightgreen;
+  pointer-events: none;
+}
+
+.restart-btn {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  
+  margin-top: 10px;
+  padding: 1.3rem;
+
+  width: 50%;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  color: whitesmoke;
+  background-color: #121212;
+
+  transition: all .3s ease-in-out;
+}
