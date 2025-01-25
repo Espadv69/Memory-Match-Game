@@ -94,4 +94,8 @@ function checkForMatch() {
       flippedCards = [] // Reset the flipped cards array
     }, 1000)
   }
+
+  // Increment the move counter and update the DOM
+  moves++
+  $movesCounter.textContent = moves
 }
