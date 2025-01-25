@@ -28,4 +28,12 @@ function initializeGame() {
   // Shuffle the cards and clear the board
   const shuffledDeck = shuffleDeck(deck)
   $cardGrid.innerHTML = '' // Remove any existing cards
+
+  // Create cards and add them to the board
+  shuffledDeck.forEach((value) => {
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.dataset.value = value // Store the card value in a data attribute
+    card.textContent = '' // Initially, the card is hidden
+  })
 }
