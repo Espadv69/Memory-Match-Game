@@ -81,17 +81,17 @@ function checkForMatch() {
           'Congratulations! You completed the game'
         $congratulationsContainer.appendChild($congratulations_p)
       }, 500)
-    } else {
-      // If the cards don't match, flip them back after a short delay
-      setTimeout(() => {
-        card1.textContent = ''
-        card2.textContent = ''
-
-        card1.classList.remove('flipped')
-        card2.classList.remove('flipped')
-
-        flippedCards = [] // Reset the flipped cards array
-      }, 1000)
     }
+  } else {
+    // If the cards don't match, flip them back after a short delay
+    setTimeout(() => {
+      card1.textContent = ''
+      card2.textContent = ''
+
+      card1.classList.remove('flipped')
+      card2.classList.remove('flipped')
+
+      flippedCards = [] // Reset the flipped cards array
+    }, 1000)
   }
 }
