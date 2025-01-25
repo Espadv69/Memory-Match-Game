@@ -7,3 +7,7 @@ const $restartBtn = document.querySelector('.restart-btn')
 let moves = 0 // Counter for the number of moves
 let flippedCards = [] // Cards currently flipped
 let matchedCards = 0 // Counter for matched pairs
+
+// Array containing card value
+const cardValue = ['🌹', '❤️', '🥛', '🍆', '🥕', '🍍', '🍎']
+const deck = [...cardValue, ...cardValue] // Duplicated the cards
