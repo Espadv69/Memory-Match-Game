@@ -22,8 +22,18 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 button {
   cursor: pointer;
 }
+
+.game-container {
+  text-align: center;
+}
+
