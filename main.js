@@ -35,5 +35,9 @@ function initializeGame() {
     card.classList.add('card')
     card.dataset.value = value // Store the card value in a data attribute
     card.textContent = '' // Initially, the card is hidden
+
+    // Add a click event to flip the card
+    card.addEventListener('click', () => flippedCards(card))
+    $cardGrid.appendChild(card)
   })
 }
