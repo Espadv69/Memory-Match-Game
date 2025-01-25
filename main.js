@@ -11,3 +11,8 @@ let matchedCards = 0 // Counter for matched pairs
 // Array containing card value
 const cardValue = ['🌹', '❤️', '🥛', '🍆', '🥕', '🍍', '🍎']
 const deck = [...cardValue, ...cardValue] // Duplicated the cards
+
+// Function to shuffle the deck randomly
+function shuffleDeck(array) {
+  return array.sort(() => Math.random() - 0.5)
+}
