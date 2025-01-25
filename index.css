@@ -44,3 +44,22 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+
+.card {
+  cursor: pointer;
+
+  font-size: 24px;
+
+  width: 80px;
+  height: 100px;
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #121212;
+  scale: 1;
+  transition: transform .3s;
+}
