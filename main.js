@@ -45,10 +45,16 @@ function initializeGame() {
 // Function to flip a card
 function flipCard(card) {
   // Do nothing if the card is already flipped or matched
-  if (card.classList.contains('flipped') || card.classList.contains('matched')) return
+  if (card.classList.contains('flipped') || card.classList.contains('matched'))
+    return
 
   // Show the card's value and flip it
   card.textContent = card.dataset.value
   card.classList.add('flipped')
   flippedCards.push(card)
+
+  // If two cards are flipped, check if they match
+  if (flippedCards.length === 2) {
+    checkForMatch()
+  }
 }
