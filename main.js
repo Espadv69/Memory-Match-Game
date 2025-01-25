@@ -102,3 +102,6 @@ function checkForMatch() {
 
 // Add an event to the restart button to reset the game
 $restartBtn.addEventListener('click', initializeGame)
+
+// Initialize the game when the page loads
+initializeGame()
