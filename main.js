@@ -2,6 +2,7 @@
 const $cardGrid = document.querySelector('.card-grid')
 const $movesCounter = document.querySelector('.moves-counter')
 const $restartBtn = document.querySelector('.restart-btn')
+const $congratulationsContainer = document.querySelector('.congratulations')
 
 // Global variables for the game
 let moves = 0 // Counter for the number of moves
@@ -73,7 +74,14 @@ function checkForMatch() {
 
     // If all card are matched, display a congratulation message
     if (matchedCards === deck.length) {
-      
+      setTimeout(() => {
+        const $congratulations_p = document.createElement('p')
+        $congratulations_p.classList.add('congratulations-p')
+        $congratulations_p.textContent =
+          'Congratulations! You completed the game'
+        $congratulationsContainer.appendChild($congratulations_p)
+      }, 500)
+    } else {
     }
   }
 }
