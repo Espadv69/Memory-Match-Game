@@ -58,3 +58,8 @@ function flipCard(card) {
     checkForMatch()
   }
 }
+
+// Function to check if the flipped cards are a match
+function checkForMatch() {
+  const [card1, card2] = flippedCards
+}
