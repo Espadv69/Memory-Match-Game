@@ -41,3 +41,8 @@ function initializeGame() {
     $cardGrid.appendChild(card)
   })
 }
+
+// Function to flip a card
+function flipCard(card) {
+  
+}
