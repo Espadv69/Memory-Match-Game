@@ -24,4 +24,8 @@ function initializeGame() {
   matchedCards = 0
   flippedCards = []
   $movesCounter.textContent = moves
+
+  // Shuffle the cards and clear the board
+  const shuffledDeck = shuffleDeck(deck)
+  $cardGrid.innerHTML = '' // Remove any existing cards
 }
