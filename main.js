@@ -99,3 +99,6 @@ function checkForMatch() {
   moves++
   $movesCounter.textContent = moves
 }
+
+// Add an event to the restart button to reset the game
+$restartBtn.addEventListener('click', initializeGame)
