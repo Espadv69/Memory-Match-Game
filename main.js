@@ -70,5 +70,10 @@ function checkForMatch() {
 
     matchedCards += 2 // Increment the matched pairs counter
     flippedCards = [] // Reset the flipped cards array
+
+    // If all card are matched, display a congratulation message
+    if (matchedCards === deck.length) {
+      
+    }
   }
 }
